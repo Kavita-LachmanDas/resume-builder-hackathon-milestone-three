@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Editable Resume Builder</h2>
+
+        <!-- Resume Form -->
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" required></textarea>
+            
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="projects">Projects:</label>
+            <textarea id="projects" name="projects" required></textarea>
+
+            <label for="languages">Languages Known:</label>
+            <textarea id="languages" name="languages" required></textarea>
+
+            <label for="certifications">Certifications:</label>
+            <textarea id="certifications" name="certifications"></textarea>
+
+            <label for="hobbies">Hobbies:</label>
+            <textarea id="hobbies" name="hobbies"></textarea>
+
+            <button type="submit" class="btn-submit">Generate Resume</button>
+        </form>
+
+        <!-- Generated Resume Section -->
+        <div id="generatedResume" style="display: none;">
+            <div class="resume-container">
+                <div class="resume-sidebar">
+                    <div class="resume-image">
+                        <img src="profile-placeholder.png" alt="Profile Image" class="profile-pic" id="profilePic">
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                        <button type="button" class="change-image-btn" id="changeImageBtn">Change Image</button>
+                    </div>
+                    <div class="personal-info">
+                        <h2 class="resume-name"></h2>
+                        <p class="resume-email"></p>
+                        <p class="resume-phone"></p>
+                        <p class="resume-address"></p>
+                    </div>
+                    <div class="resume-skills">
+                        <h3>Skills</h3>
+                        <p class="resume-skills-list"></p>
+                    </div>
+                    <div class="resume-languages">
+                        <h3>Languages Known</h3>
+                        <p class="resume-languages-list"></p>
+                    </div>
+                </div>
+
+                <div class="resume-content">
+                    <div class="resume-section">
+                        <h3>Education</h3>
+                        <p class="resume-education"></p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Experience</h3>
+                        <p class="resume-experience"></p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Projects</h3>
+                        <p class="resume-projects"></p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Certifications</h3>
+                        <p class="resume-certifications"></p>
+                    </div>
+                    <div class="resume-section">
+                        <h3>Hobbies</h3>
+                        <p class="resume-hobbies"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
